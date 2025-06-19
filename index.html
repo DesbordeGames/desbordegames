@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfect Squares Grid</title>
+  <style>
+    /* Reset default margins and center the grid on the page */
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    /* Container uses CSS Grid with three columns.
+       The grid's width adjusts while each item ensures a 1:1 aspect ratio,
+       making every cell a perfect square. */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px; /* Optional gap between squares */
+      width: 80vw;
+      max-width: 600px;
+    }
+
+    /* Each grid item maintains a square shape using the aspect-ratio property.
+       You may adjust the colors or add content as desired. */
+    .grid-item {
+      aspect-ratio: 1 / 1;
+    }
+
+    /* Each square gets a unique background color */
+    .red { background-color: #ff4d4d; }
+    .blue { background-color: #4d79ff; }
+    .green { background-color: #4dff88; }
+    .yellow { background-color: #ffff66; }
+    .purple { background-color: #bf80ff; }
+    .orange { background-color: #ff944d; }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item red"></div>
+    <div class="grid-item blue"></div>
+    <div class="grid-item green"></div>
+    <div class="grid-item yellow"></div>
+    <div class="grid-item purple"></div>
+    <div class="grid-item orange"></div>
+  </div>
+</body>
+</html>
