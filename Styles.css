@@ -15,17 +15,7 @@
 
 /*Fonts*/
 
-  @font-face {
-    font-family: "Lemon Milk Light";
-    src: url("Fonts/Lemon\ Milk\ Light.otf");
-    font-weight: normal;
-    font-style: normal;}
 
-    @font-face {
-      font-family: "Montserrat Medium";
-      src: url("Fonts/Montserrat\ Medium.ttf");
-      font-weight: normal;
-      font-style: normal;}
 
 
 
@@ -63,8 +53,8 @@
     line-height: 1;}
 
   h2 {
-    font-family: "Montserrat Medium";
-    font-size: 5vw;
+    font-family: "Jost", sans-serif;
+    font-size: 3.5vw;
     color: White;
     padding: 0;
     margin: 0;}
