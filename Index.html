@@ -1,54 +1,64 @@
 <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfect Squares Grid</title>
-  <style>
-    /* Reset default margins and center the grid on the page */
-    body {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #f0f0f0;
-    }
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="Styles.css">
+		<link rel="icon" href="Resources/Favicon Desborde Games.ico">
+		<title>Desborde Games</title>
+    	<meta name="description" content="The oficial website of the developer team behind Midnight snack!">
+      	<meta name="keywords" content="TBD">
+	</head>
+	<body>
+		<div class="desktop">
 
-    /* Container uses CSS Grid with three columns.
-       The grid's width adjusts while each item ensures a 1:1 aspect ratio,
-       making every cell a perfect square. */
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px; /* Optional gap between squares */
-      width: 80vw;
-      max-width: 600px;
-    }
 
-    /* Each grid item maintains a square shape using the aspect-ratio property.
-       You may adjust the colors or add content as desired. */
-    .grid-item {
-      aspect-ratio: 1 / 1;
-    }
-
-    /* Each square gets a unique background color */
-    .red { background-color: #ff4d4d; }
-    .blue { background-color: #4d79ff; }
-    .green { background-color: #4dff88; }
-    .yellow { background-color: #ffff66; }
-    .purple { background-color: #bf80ff; }
-    .orange { background-color: #ff944d; }
-  </style>
-</head>
-<body>
+<!--Opening-->
   <div class="grid-container">
-    <div class="grid-item red"></div>
-    <div class="grid-item blue"></div>
-    <div class="grid-item green"></div>
-    <div class="grid-item yellow"></div>
-    <div class="grid-item purple"></div>
-    <div class="grid-item orange"></div>
+    <div class="grid-item" style="background-color: #FFFFFF;"><img src="Resources/Logo Desborde Games Color.png" alt="The Desborde Games logo"></div>
+    <div class="grid-item" style="background-color: #1D3156;"><a href="https://store.steampowered.com/app/3363200/Midnight_Snack/"><img src="Resources/Logo Midnight Snack.png" alt="The Midnight Snack logo"></a></div>
+    <div class="grid-item" style="background-color: #15DAB6;"></div>
+    <div class="grid-item" style="background-color: #FFC410;"><h2>Plastilina Project</h2></div>
+    <div class="grid-item" style="background-color: #F31717;"><h2>About Us</h2></div>
+    <div class="grid-item" style="background-color: #000000;"><h2>Contact</h2></div>
   </div>
-</body>
+
+  <script>
+    const items = document.querySelectorAll('.grid-item');
+    const colors = ["#FFFFFF", "#FFC410", "#15DAB6", "#1D3156", "#F31717", "#000000"];
+
+    items.forEach(item => {
+      // Store original and current color
+      let currentColor = item.style.backgroundColor;
+
+      item.addEventListener('mouseenter', () => {
+        // Get all other colors (excluding current color)
+        const availableColors = colors.filter(color => color !== currentColor);
+        // Choose a random one
+        const newColor = availableColors[Math.floor(Math.random() * availableColors.length)];
+        // Set and save
+        item.style.backgroundColor = newColor;
+        currentColor = newColor;});});
+  </script>
+
+			
+<!--Footer-->
+			<footer>
+				<p class="footer">Designed and programmed by Desborde Games</p>
+			</footer>
+		</div>
+
+
+
+<!--Phone Version-->
+
+<!--About Me-->
+		<div class="phone">
+			
+<!--Footer-->
+			<footer>
+				<p class="p-footer">Designed and programed by Desborde Games</p>
+			</footer>
+		</div>
+	</body>
 </html>
