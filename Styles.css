@@ -1,21 +1,15 @@
 /*Hidding mechanism*/
 
   .phone {
-    display: none;
-    }
+    display: none;}
 
   @media screen and (orientation: portrait) {
+    
     .desktop {
       display: none;}
     
     .phone {
       display: block;}}
-
-
-
-/*Fonts*/
-
-
 
 
 
@@ -29,87 +23,85 @@
     background-color: white;
     margin: 0px;}
 
-  p {
-    font-family: "Montserrat Medium";
-    font-size: 1vw;
-    color: black;
-    padding: 0;
-    margin: 0;}
-
   a {
-    text-decoration: none;
-    font-family: "Montserrat Medium";
-    color: black;}
-
-  a:hover {
-    color: green;}
-
-  h1 {
-    font-family: "Lemon Milk Light";
-    font-size: 2vw;
-    color: green;
-    padding: 0;
-    margin: 0;
-    line-height: 1;}
-
-  h2 {
-    font-family: "Jost", sans-serif;
-    font-size: 3.5vw;
-    color: White;
-    padding: 0;
-    margin: 0;}
+    text-decoration: none;}
 
   img {
     width: 100%;
-    display: block;}
-
-  video {
-    width: 100%;
-    display: block;}
-
-  iframe {
     display: block;}
 
 
 
 /*Desktop*/
 
+    .grid-header {
+      grid-column: 1 / 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      max-width: 15vw;}
+
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-    }
+      grid-template-columns: repeat(3, 1fr);}
 
     .grid-item {
       transition: background-color 0.3s ease;
       aspect-ratio: 1 / 1;
       display: flex;
       justify-content: center;
-        align-items: center;}
-
-
-
-
-  /*Footer*/
-
-    footer {
-      text-align: center;
-      color: grey;
-      padding-top: 1vw;
-      padding-bottom: 1vw;}
-
-
- 
+      align-items: center;
+      color: #FFFFFF;
+      font-family: "Jost", sans-serif;
+      font-size: 2vw;}
+    
+    .grid-footer {
+      transition: background-color 0.3s ease;
+      grid-column: 1 / 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0.5vw;
+      padding-bottom: 0.5vw;
+      color: #FFFFFF;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1vw;}
 
 
 
 /*Phone Version*/
 
+    .grid-phone-header {
+      grid-column: 1 / 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 25vw;
+      margin: auto;}
 
-  /*Footer*/
+    .grid-phone-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);}
 
-    .p-footer {
-      font-size: 1vw;
-      margin-bottom: 1vw;
-      margin-top: 1vw;}
-
+    .grid-phone-item {
+      transition: background-color 0.3s ease;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFFFFF;
+      font-family: "Jost", sans-serif;
+      font-size: 3.5vw;}
+    
+    .grid-phone-footer {
+      transition: background-color 0.3s ease;
+      grid-column: 1 / 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0.5vw;
+      padding-bottom: 0.5vw;
+      color: #FFFFFF;
+      font-family: "Montserrat", sans-serif;
+      font-size: 2vw;}
