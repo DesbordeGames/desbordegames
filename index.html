@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!--Fonts-->
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap" rel="stylesheet">		
+		<link rel="stylesheet" href="Styles.css">
+		<link rel="icon" href="Resources/Favicon Desborde Games.ico">
+		<title>Desborde Games</title>
+    	<meta name="description" content="The oficial website of the developer team behind Midnight snack!">
+      	<meta name="keywords" content="TBD">
+	</head>
+	<body>
+
+<!--Desktop-->
+
+		<div class="desktop">
+			<div class="grid-container">
+				<div class="grid-header" style="background-color: #FFFFFF;"><a href="https://desbordegames.github.io/desbordegames/"><img src="Resources/Logo Desborde Games.png" alt="The Desborde Games logo"></a></div>
+				<div class="grid-item" style="background-color: #FFC410;"><a href="https://store.steampowered.com/app/3363200/Midnight_Snack/" target="_blank"><img src="Resources/Logo Midnight Snack.png" alt="The Midnight Snack logo"></a></div>
+				<div class="grid-item" style="background-color: #1D3156;"><a href="https://chusky8.itch.io/bur-bruja" target="_blank"><img src="Resources/Logo Burbruja.png" alt="The El Desvan de la Burbruja logo"></a></div>
+				<div class="grid-item" style="background-color: #F31717;"><a href="https://fure4.itch.io/crabfinder" target="_blank"><img src="Resources/Logo Crabfinder.png" alt="The Crabfinder logo"></a></div>
+				<div class="grid-item" style="background-color: #F31717;"><h2>Plastilina Project</h2></div>
+				<div class="grid-item" style="background-color: #15DAB6;"><h2>About Us</h2></div>
+				<div class="grid-item" style="background-color: #FFC410;"><h2>Contact</h2></div>
+				<div class="grid-footer" style="background-color: #1D3156;"><p>Designed and programmed by Desborde Games</p></div>
+			</div>
+
+			<script>
+				const items = document.querySelectorAll('.grid-item, .grid-footer');
+				const colors = ["#FFC410", "#15DAB6", "#1D3156", "#F31717"];
+
+				items.forEach(item => {
+				// Store original and current color
+				let currentColor = item.style.backgroundColor;
+
+				item.addEventListener('mouseenter', () => {
+					// Get all other colors (excluding current color)
+					const availableColors = colors.filter(color => color !== currentColor);
+					// Choose a random one
+					const newColor = availableColors[Math.floor(Math.random() * availableColors.length)];
+					// Set and save
+					item.style.backgroundColor = newColor;
+					currentColor = newColor;});});
+			</script>
+		</div>
+
+<!--Phone-->
+
+		<div class="phone">
+			<div class="grid-phone-container">
+				<div class="grid-phone-header" style="background-color: #FFFFFF;"><a href="https://desbordegames.github.io/desbordegames/"><img src="Resources/Logo Desborde Games.png" alt="The Desborde Games logo"></a></div>
+				<div class="grid-phone-item" style="background-color: #FFC410;"><a href="https://store.steampowered.com/app/3363200/Midnight_Snack/" target="_blank"><img src="Resources/Logo Midnight Snack.png" alt="The Midnight Snack logo"></a></div>
+				<div class="grid-phone-item" style="background-color: #15DAB6;"><a href="https://chusky8.itch.io/bur-bruja" target="_blank"><img src="Resources/Logo Burbruja.png" alt="The El Desvan de la Burbruja logo"></a></div>
+				<div class="grid-phone-item" style="background-color: #1D3156;"><a href="https://fure4.itch.io/crabfinder" target="_blank"><img src="Resources/Logo Crabfinder.png" alt="The Crabfinder logo"></a></div>
+				<div class="grid-phone-item" style="background-color: #F31717;"><h2>Plastilina Project</h2></div>
+				<a href="https://desbordegames.github.io/desbordegames/"><div class="grid-phone-item" style="background-color: #15DAB6;"><h2>About Us</h2></div></a>
+				<a href="https://desbordegames.github.io/desbordegames/"><div class="grid-phone-item" style="background-color: #FFC410;"><h2>Contact</h2></div></a>
+				<div class="grid-phone-footer" style="background-color: #1D3156;"><p>Designed and programmed by Desborde Games</p></div>
+			</div>
+
+			<script>
+				const phoneitems = document.querySelectorAll('.grid-phone-item, .grid-phone-footer');
+				const phonecolors = ["#FFC410", "#15DAB6", "#1D3156", "#F31717"];
+
+				phoneitems.forEach(item => {
+				// Store original and current color
+				let currentColor = item.style.backgroundColor;
+
+				item.addEventListener('mouseenter', () => {
+					// Get all other colors (excluding current color)
+					const availableColors = phonecolors.filter(color => color !== currentColor);
+					// Choose a random one
+					const newColor = availableColors[Math.floor(Math.random() * availableColors.length)];
+					// Set and save
+					item.style.backgroundColor = newColor;
+					currentColor = newColor;});});
+			</script>
+		</div>
+	</body>
+</html>
