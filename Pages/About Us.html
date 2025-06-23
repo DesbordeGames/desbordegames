@@ -6,10 +6,10 @@
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&display=swap" rel="stylesheet">		
-		<link rel="stylesheet" href="Styles.css">
-		<link rel="icon" href="Resources/Favicon Desborde Games.ico">
+		<link rel="stylesheet" href="../Styles.css">
+		<link rel="icon" href="../Resources/Favicon Desborde Games.ico">
 		<title>Desborde Games</title>
-    	<meta name="description" content="The oficial website of the developer team behind Midnight snack!">
+    	<meta name="description" content="About desborde Games">
       	<meta name="keywords" content="TBD">
 	</head>
 	<body>
@@ -17,19 +17,61 @@
 <!--Desktop-->
 
 		<div class="desktop">
-			<div class="grid-container">
-				<div class="grid-header" style="background-color: #FFFFFF;"><a href="https://desbordegames.github.io/desbordegames/"><img src="Resources/Logo Desborde Games.png" alt="The Desborde Games logo"></a></div>
-				<a href="https://store.steampowered.com/app/3363200/Midnight_Snack/" target="_blank"><div class="grid-item" style="background-color: #FFC410;"><img src="Resources/Logo Midnight Snack.png" alt="The Midnight Snack logo"></div></a>
-				<a href="https://chusky8.itch.io/bur-bruja" target="_blank"><div class="grid-item" style="background-color: #1D3156;"><img src="Resources/Logo Burbruja.png" alt="The El Desvan de la Burbruja logo"></div></a>
-				<a href="https://fure4.itch.io/crabfinder" target="_blank"><div class="grid-item" style="background-color: #F31717;"><img src="Resources/Logo Crabfinder.png" alt="The Crabfinder logo"></div></a>
-				<div class="grid-item" style="background-color: #F31717;"><h2>Plastilina Project</h2></div>
-				<a href="Pages/About Us.html"><div class="grid-item" style="background-color: #15DAB6;"><h2>About Us</h2></div></a>
-				<div class="grid-item" id="clickable" style="background-color: #FFC410;"><h2>Contact</h2></div>
-				<div class="grid-footer" style="background-color: #1D3156;"><p>Designed and programmed by Desborde Games</p></div>
+			<div class="grid-container-margins">
+				<div class="grid-header-margins">
+					<a href="../index.html">
+						<img src="../Resources/Logo Desborde Games.png" alt="The Desborde Games logo">
+					</a>
+				</div>
+				<div class="grid-text">
+					<p>Desborde Games is an independent studio that creates videogames with at least one strange idea. We move at a sustainable pace, working step by step in our spare time, keeping the balance between our passion and our life. We bet on creative risk: we explore unconventional mechanics, styles and narratives. And we do it with honesty, sharing both our successes and our mistakes. At Desborde games, we believe that good games are born from curiosity and sincere collaboration.</p>
+				</div>
+				<div class="grid-empty"></div>
+				<a href="https://www.linkedin.com/in/daniel-de-linos/" target="_blank">
+					<div class="grid-item-margins" style="background-color: #F31717;">
+						<div>
+							<img src="../Resources/Team/Daniel de Linos.jpeg" alt="A protrait of Daniel de Linos">
+							<p>Daniel de Linos</p>
+							<p>Game Designer</p>
+						</div>
+					</div>
+				</a>
+				<a href="https://www.linkedin.com/in/robertodelsazpolo/" target="_blank">
+					<div class="grid-item-margins" style="background-color: #1D3156;">
+						<div>
+							<img src="../Resources/Team/Roberto Del Saz.jpeg" alt="A protrait of Roberto Del Saz">
+							<p>Roberto Del Saz</p>
+							<p>3D Artist</p>
+						</div>
+					</div>
+				</a>
+				<a href="https://www.linkedin.com/in/%C3%A1lvaro-lozano-de-osma-3a2522146/" target="_blank">
+					<div class="grid-item-margins" style="background-color: #FFC410;">
+						<div>
+							<img src="../Resources/Team/Álvaro Lozano.jpeg" alt="A protrait of &Aacute;lvaro Lozano">
+							<p>&Aacute;lvaro Lozano</p>
+							<p>Programmer</p>
+						</div>
+					</div>
+				</a>
+				<div class="grid-empty"></div>
+				<div class="grid-empty"></div>
+				<a href="https://www.linkedin.com/in/jaimealgibez/" target="_blank">
+					<div class="grid-item-margins" style="background-color: #15DAB6;">
+						<div>
+							<img src="../Resources/Team/Jaime Algibez.jpeg" alt="A protrait of Jaime Algibez">
+							<p>Jaime Algibez</p>
+							<p>Marketing</p>
+						</div>
+					</div>
+				</a>
+				<div class="grid-footer-margins" style="background-color: #1D3156;">
+					<p>Designed and programmed by Desborde Games</p>
+				</div>
 			</div>
 
 			<script>
-				const items = document.querySelectorAll('.grid-item, .grid-footer');
+				const items = document.querySelectorAll('.grid-item-margins, .grid-footer-margins');
 				const colors = ["#FFC410", "#15DAB6", "#1D3156", "#F31717"];
 				items.forEach(item => {
 				let currentColor = item.style.backgroundColor;
@@ -38,18 +80,13 @@
 					const newColor = availableColors[Math.floor(Math.random() * availableColors.length)];
 					item.style.backgroundColor = newColor;
 					currentColor = newColor;});});
-				const toggleText = (id, originalHTML, altHTML) => {
-					const el = document.getElementById(id);
-					el.addEventListener('click', () => {
-					el.innerHTML = (el.innerHTML === originalHTML) ? altHTML : originalHTML;});};
-					toggleText("clickable", `<span class="mail">desborde.games@gmail.com</span>`, `<span class="contact">Contact</span>`);
 			</script>
 		</div>
 
 <!--Phone-->
 
 		<div class="phone">
-			<div class="grid-phone-container">
+			<div class="grid-phone-container-margins">
 				<div class="grid-phone-header" style="background-color: #FFFFFF;"><a href="https://desbordegames.github.io/desbordegames/"><img src="Resources/Logo Desborde Games.png" alt="The Desborde Games logo"></a></div>
 				<div class="grid-phone-item" style="background-color: #FFC410;"><a href="https://store.steampowered.com/app/3363200/Midnight_Snack/" target="_blank"><img src="Resources/Logo Midnight Snack.png" alt="The Midnight Snack logo"></a></div>
 				<div class="grid-phone-item" style="background-color: #15DAB6;"><a href="https://chusky8.itch.io/bur-bruja" target="_blank"><img src="Resources/Logo Burbruja.png" alt="The El Desvan de la Burbruja logo"></a></div>
@@ -70,11 +107,6 @@
 					const newColor = availableColors[Math.floor(Math.random() * availableColors.length)];
 					item.style.backgroundColor = newColor;
 					currentColor = newColor;});});
-				const toggleTextPhone = (id, originalHTML, altHTML) => {
-					const el = document.getElementById(id);
-					el.addEventListener('click', () => {
-					el.innerHTML = (el.innerHTML === originalHTML) ? altHTML : originalHTML;});};
-					toggleTextPhone("clickable-phone", `<span class="mail-phone">desborde.games@gmail.com</span>`, `<span class="contact-phone">Contact</span>`);
 			</script>
 		</div>
 	</body>
