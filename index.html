@@ -24,7 +24,7 @@
 				<div class="grid-item" style="background-color: #F31717;"><a href="https://fure4.itch.io/crabfinder" target="_blank"><img src="Resources/Logo Crabfinder.png" alt="The Crabfinder logo"></a></div>
 				<div class="grid-item" style="background-color: #F31717;"><h2>Plastilina Project</h2></div>
 				<div class="grid-item" style="background-color: #15DAB6;"><h2>About Us</h2></div>
-				<div class="grid-item" style="background-color: #FFC410;"><h2>Contact</h2></div>
+				<div class="grid-item" id="clickable" style="background-color: #FFC410;"><h2>Contact</h2></div>
 				<div class="grid-footer" style="background-color: #1D3156;"><p>Designed and programmed by Desborde Games</p></div>
 			</div>
 
@@ -37,13 +37,17 @@
 				let currentColor = item.style.backgroundColor;
 
 				item.addEventListener('mouseenter', () => {
-					// Get all other colors (excluding current color)
 					const availableColors = colors.filter(color => color !== currentColor);
-					// Choose a random one
 					const newColor = availableColors[Math.floor(Math.random() * availableColors.length)];
-					// Set and save
 					item.style.backgroundColor = newColor;
 					currentColor = newColor;});});
+					
+				const toggleText = (id, originalHTML, altHTML) => {
+					const el = document.getElementById(id);
+					el.addEventListener('click', () => {
+					el.innerHTML = (el.innerHTML === originalHTML) ? altHTML : originalHTML;});};
+
+					toggleText("clickable", `<span class="mail">desborde.games@gmail.com</span>`, `<span class="contact">Contact</span>`);
 			</script>
 		</div>
 
@@ -57,7 +61,7 @@
 				<div class="grid-phone-item" style="background-color: #1D3156;"><a href="https://fure4.itch.io/crabfinder" target="_blank"><img src="Resources/Logo Crabfinder.png" alt="The Crabfinder logo"></a></div>
 				<div class="grid-phone-item" style="background-color: #F31717;"><h2>Plastilina Project</h2></div>
 				<a href="https://desbordegames.github.io/desbordegames/"><div class="grid-phone-item" style="background-color: #15DAB6;"><h2>About Us</h2></div></a>
-				<a href="https://desbordegames.github.io/desbordegames/"><div class="grid-phone-item" style="background-color: #FFC410;"><h2>Contact</h2></div></a>
+				<div class="grid-phone-item" id="clickable-phone" style="background-color: #FFC410;"><h2>Contact</h2></div>
 				<div class="grid-phone-footer" style="background-color: #1D3156;"><p>Designed and programmed by Desborde Games</p></div>
 			</div>
 
@@ -70,13 +74,17 @@
 				let currentColor = item.style.backgroundColor;
 
 				item.addEventListener('mouseenter', () => {
-					// Get all other colors (excluding current color)
 					const availableColors = phonecolors.filter(color => color !== currentColor);
-					// Choose a random one
 					const newColor = availableColors[Math.floor(Math.random() * availableColors.length)];
-					// Set and save
 					item.style.backgroundColor = newColor;
 					currentColor = newColor;});});
+
+				const toggleTextPhone = (id, originalHTML, altHTML) => {
+					const el = document.getElementById(id);
+					el.addEventListener('click', () => {
+					el.innerHTML = (el.innerHTML === originalHTML) ? altHTML : originalHTML;});};
+
+					toggleTextPhone("clickable-phone", `<span class="mail-phone">desborde.games@gmail.com</span>`, `<span class="contact-phone">Contact</span>`);
 			</script>
 		</div>
 	</body>

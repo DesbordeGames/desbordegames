@@ -54,8 +54,19 @@
       align-items: center;
       color: #FFFFFF;
       font-family: "Jost", sans-serif;
+      font-size: 2vw;} 
+
+    .contact {
+      color: #FFFFFF;
+      font-family: "Jost", sans-serif;
+      font-weight: bold;
+      font-size: 3vw;}
+
+    .mail {
+      color: #FFFFFF;
+      font-family: "Montserrat", sans-serif;
       font-size: 2vw;}
-    
+
     .grid-footer {
       transition: background-color 0.3s ease;
       grid-column: 1 / 4;
@@ -94,6 +105,18 @@
       font-family: "Jost", sans-serif;
       font-size: 3.5vw;}
     
+    .contact-phone {
+      color: #FFFFFF;
+      font-family: "Jost", sans-serif;
+      font-weight: bold;
+      font-size: 5vw;}
+
+    .mail-phone {
+      color: #FFFFFF;
+      font-family: "Montserrat", sans-serif;
+      font-size: 3vw;}
+
+
     .grid-phone-footer {
       transition: background-color 0.3s ease;
       grid-column: 1 / 3;
